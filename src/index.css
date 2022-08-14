@@ -1,13 +1,60 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face{
+    font-family: "comforta";
+    src: url("./utils/font/Comfortaa-Regular.otf") format("otf"),
+    url("./utils/font/Comfortaa-Regular.ttf") format("ttf"),
+    url("./utils/font/Comfortaa-Regular.woff") format("woff");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: comforta;
 }
+
+button , a{
+    cursor: pointer;
+}
+body{
+  overflow-x: hidden;
+  transition: all .4s;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+}
+.darkmode{
+  filter: invert(1);
+  -webkit-filter: invert(1);
+  background-color: #212529;
+}
+
+.darkmode .notInvert{
+  filter: invert(1);
+  -webkit-filter: invert(1);
+
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+  ::-webkit-scrollbar-track {
+  background: #ccc; 
+}
+  ::-webkit-scrollbar-thumb {
+    background: #343a40;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+
+.swal-overlay{
+  background-color: rgba(0 , 0 , 0 , 0);
+}
+
+.swal-modal{
+  box-shadow:0 0 20px 10px  #ccc;
+}
+

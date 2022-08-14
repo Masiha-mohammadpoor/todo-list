@@ -1,0 +1,134 @@
+@import "../mixin";
+@import "../varable";
+.todo{
+    @include wh(100% , fit-content , 0px);
+    @include flex(space-between , center , row);
+    @include mp(0 0 20px 0 , 10px);
+    border-bottom: 3px solid #c1c1c1;
+    .todoName{
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        .isCompleted{
+            text-decoration: 1px line-through #ff0000;
+        }
+        .date{
+            color:#989898;
+            margin-top: 3px;
+            font-size: 12px;
+}
+        .passedDate{
+            color:#ff0000;
+            margin-top: 3px;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 600;
+            &::before{
+                content: "✘ passed ";
+            }
+        }
+    }
+
+
+    .options{
+        width: 30%;
+        @include flex(space-between , center , row);
+
+        button{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 20px;
+
+        }
+
+        input{
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;    
+            transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            accent-color: green;
+    }
+    }
+
+    .category{
+        padding: 9px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #3c6cf2;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+}
+
+.completeTodo{
+    text-decoration:2px line-through #ff0000;
+}
+
+@media (max-width:650px){
+    .todo{
+        .todoName{
+            font-size: 15px;
+        }
+
+        .category{
+            font-size: 13px;
+        }
+        
+    }
+}
+
+@media (max-width:540px){
+    .todo{
+        margin-left: 40%;
+        width:140%
+    }
+}
+
+@media (max-width:390px){
+    .todo{
+        margin-left: 70%;
+        width:170%
+    }
+}
+
+@media (max-width:320px){
+    .todo{
+        margin-left: 90%;
+        width:190%
+    }
+}
+
+@media (max-width:290px){
+    .todo{
+        margin-left: 110%;
+        width:210%
+    }
+}
+
+@media (max-width:260px){
+    .todo{
+        margin-left: 130%;
+        width:230%
+    }
+}
+
+@media (max-width:240px){
+    .todo{
+        margin-left: 150%;
+        width:250%;
+        .options{
+            width: 25%
+        }
+    }
+}

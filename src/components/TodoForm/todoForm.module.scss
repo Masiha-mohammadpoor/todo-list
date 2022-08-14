@@ -1,0 +1,150 @@
+@import "../mixin";
+
+@import "../mixin";
+
+.formContainer{
+    @include wh(80% , fit-content , 0);
+    @include flex(space-evenly , center , row);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    .form{
+        @include wh(100% , 100% , 0);
+        @include flex(space-evenly , center , row);
+        .input{
+            @include wh(390px , 50px , 30px);
+            border: none;
+            outline: none;
+            padding: 10px;
+            text-transform: capitalize;
+            box-shadow: inset 3px 3px 5px #bdbcbc,3px 3px 5px #bdbcbc;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .categoryAndDate{
+            width: 25%;
+            @include flex(space-between , center  , row);
+        }
+        .select{
+            width: 10rem;
+        }
+        .calendar{
+            color: #3c6cf2;
+            font-size: 30px;
+            position: relative;
+            .calenderContainer{
+                font-size: 15px;
+                color: #000;
+                position: absolute;
+                z-index: 30;
+                top: 100%;
+                right: 100%;
+                background-color: #fff;
+                @include wh(350px , fit-content , 7px);
+                @include flex(space-between , center , column);
+                box-shadow: 0 0 15px 10px #ccc;
+                padding: 10px;
+                display: none;
+                .calender{
+                    @include wh(100% , 100% , 0);
+                    margin-bottom: 10px;
+                    border: none;
+                }
+                .okDate{
+                    @include wh(60px , 30px , 5px);
+                    border: none;
+                    outline: none;
+                    background-color: #3c6cf2;
+                    color: #fff;
+                    font-weight:600;
+                    font-size: 15px;        
+                }
+            }
+        }
+        .btn{
+            @include wh(110px , 40px , 5px);
+            border: none;
+            outline: none;
+            background-color: #3c6cf2;
+            color: #fff;
+            font-weight:600;
+            font-size: 18px;
+        }
+
+    }
+
+}
+
+@media (max-width:1020px){
+    .formContainer{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:820px){
+    .formContainer{
+    .form{
+        flex-direction: column;
+        .input{
+            width: 70%;
+        }
+        .categoryAndDate{
+            margin-top: 30px;
+            width: 65%;
+            .select{
+                width: 70%;
+            }
+            
+        }
+        .btn{
+            margin-top: 30px;
+            width: 70%;
+        }
+    }
+}
+}
+
+@media (max-width:290px){
+    .formContainer{
+        .form{
+            .input{
+                width: 95%;
+            }
+            .categoryAndDate{
+                flex-direction: column;
+                .select{
+                    margin-bottom: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:480px){
+    .formContainer{
+        .form{
+            .calendar{
+                .calenderContainer{
+                    width: 300px;
+                    right : -160%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:290px){
+    .formContainer{
+        .form{
+            .calendar{
+                .calenderContainer{
+                    width: 250px;
+                    right : -360%;
+                }
+            }
+        }
+    }
+}

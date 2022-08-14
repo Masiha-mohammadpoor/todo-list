@@ -1,0 +1,38 @@
+@import "../mixin";
+
+.todoList{
+    @include wh(80% , fit-content , 0);
+    @include mp(60px auto 0 auto , 20px);    
+    @include flex(flex-end , center , column-reverse);
+    z-index: 10;
+
+    .nothingTodos{
+        color: #b0b0b0;
+        font-size: 25px;
+        font-weight: 600;
+        word-spacing: 7px;
+}
+}
+
+@media (max-width:730px){
+    .todoList{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:500px){
+    .todoList{
+        .nothingTodos{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width:540px){
+    .todoList{
+        width: 100%;
+        overflow-x: scroll;
+    }
+}
+

@@ -1,0 +1,28 @@
+@import "../mixin";
+
+.charts{
+    @include mp(20px 0 0 0 , 100px);
+    @include flex(center , center , column);
+    height: fit-content;
+    div {
+        @include wh(300px , 350px ,0);
+        @include flex(space-between , center , column);
+    }
+    .chartContainer{
+        z-index: -10;
+            .chart{
+                @include wh(100% , 100% , 0);
+            }
+        }
+}
+
+
+@media (max-width:320px){
+    .charts{
+        div{
+            width: 250px;
+            height: 300px;
+        }
+    }
+}
+

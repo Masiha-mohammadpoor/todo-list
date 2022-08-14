@@ -1,0 +1,35 @@
+@import "../mixin";
+@import "../varable";
+
+.nav {
+    @include flex(space-between , center , row);
+    @include mp(0 , 10px);
+    @include wh(100% , 60px , 0);
+    box-shadow: 3px 0 5px #ccc;
+
+    .title{
+        letter-spacing: 1px;
+        color: $textC;
+        margin-right: 10px;
+    }
+
+    .github{
+        font-size: 30px;
+        color: $mainC;
+        margin-top: 7px;
+    }
+    .switch{
+        @include wh(45px , 45px , 5px);
+        border: none;
+        outline: none;
+        color: #3c6cf2;
+        background-color: transparent;
+        font-size: 25px;
+    }
+}
+
+@media (max-width : 400px){
+    .nav .github , .nav .switch{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,39 @@
+@import "../mixin";
+
+.filtersContainer{
+    @include wh(70% , 150px , 0);
+    @include flex(space-between , center , column);
+    @include mp(60px auto 0 auto , 10px);
+    article{
+        @include wh(100% , fit-content ,0);
+        @include flex(space-between , center , row);
+        .select{
+            width:10rem;
+        }
+    }
+}
+
+@media (max-width:580px){
+    .filtersContainer{
+        width: 90%;
+        article{
+            h3{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width:360px){
+    .filtersContainer{
+        width: 100%;
+        article{
+            h3{
+                font-size: 14px;
+            }
+            .select{
+                width: 8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import "../mixin";
+@import "../varable";
+
+.todoNumber{
+    width: 100%;
+    @include mp(100px auto 20px auto , 0);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+
+    article{
+        @include wh(200px , 200px , 10px);
+        background-color: #e4e4e4;
+        @include flex(flex-start , center , column);
+        padding: 30px;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+
+        &:hover{
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+}
+        p {
+            font-size: 19px;
+            margin-bottom: 60px;
+        }
+
+        h1{
+            color: $mainC;
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width:900px){
+    .todoNumber{
+        article{
+            width: 180px;
+            height: 180px;
+        }
+    }
+}
+
+@media (max-width:800px){
+    .todoNumber{
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+        article{
+            margin-bottom:20px;
+        }
+    }
+}
+
+@media (max-width : 420px){
+    .todoNumber{
+        article{
+            width: 160px;
+            height: 160px;
+            p{
+                font-size:17px
+            }
+        }
+    }
+}
+
+@media (max-width : 360px){
+    .todoNumber{
+        grid-template-columns:auto;
+        article{
+            width: 170px;
+            height: 170px;
+            p{
+                font-size:19px
+            }
+        }
+
+    }
+}
